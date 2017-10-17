@@ -3,7 +3,7 @@ export TERM=screen-256color
 USERNAME=${USERNAME:-weechat}
 HOMEDIR=${HOMEDIR:-/home/$USERNAME}
 useradd --uid 1000 --groups dialout --shell /bin/bash --no-create-home --home-dir $HOMEDIR $USERNAME
-mkdir $HOMEDIR
+mkdir -p $HOMEDIR
 chown -R $USERNAME:$USERNAME $HOMEDIR
 
 if [ -n "$1" ]; then
